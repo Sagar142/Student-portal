@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>STUDENT PORTAL</title>
+</head>
+<body>
+<style>
+.invalid { border-color: red; }
+.invalid1 { border-color: red; }
+.invalid2 { border-color: red; }
+#error { color: red }
+#error1 { color: red }
+#error2 { color: red }
+body{
+      background-image: url(LOGIN%20PIC%202.jpg);
+      background-size:cover;
+      background-position: center;
+    }
+h2{color: black
+        
+    }
+td{color: black
+        
+    }
+.login{
+    position: relative;
+    top:200px;
+        
+    }
+</style> 
+<div class="login">
+<center>
+<h2>Welcome to the student portal !</h2>
+</center>
+<center>
+<form name="STUDENT PORTAL" method="post" action="HOME.html">
+<table width="50%" border="50" cellspacing=10 cellpadding=>
+<tr><td><b>Reg No.:</td><td><input type="text" id="fname" name="R19CS459"></td><td> <div
+id="error"></div></td></tr>
+<tr><td><b>Email:</td><td><input type="text" id="em" name="R19CS459@gmail.com"></td><td> <div
+id="error1"></div></td></tr>
+<tr><td><b>Password: </td><td> <input type="password" id="pass" name="r19cs459"></td><td>
+<div id="error2"></div></td></tr>
+</table>
+<br>
+<input type="submit">
+</form>
+</center>
+<script>
+document.getElementById("fname").addEventListener("focusout", myFunction);
+document.getElementById("em").addEventListener("focusout", email);
+document.getElementById("pass").addEventListener("focusout", password);
+function myFunction() {
+var name=document.f1.fname.value;
+if(name==null|| name=="")
+
+{
+fname.classList.add('invalid');
+error.innerHTML = 'Please enter a name.';
+}
+}
+function email()
+{
+var x=document.f1.em.value;
+var atposition=x.indexOf("@");
+var dotposition=x.lastIndexOf(".");
+if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){
+em.classList.add('invalid1');
+error1.innerHTML = 'Please enter a valid email.';
+}
+}
+function password() {
+var name=document.f1.pass.value;
+if(name==null|| name=="")
+{
+pass.classList.add('invalid2');
+error2.innerHTML = 'Please enter a password.';
+}
+}
+</script>
+<br>
+</body>
+</html>
